@@ -41,7 +41,7 @@ public class ProductSteps extends ScenarioSteps {
     public void verifyZoomButton() {
         homePage.open();
         homePage.goToShopButton();
-        ProductPage.selectProductFromShopList("Beanie");
+        productPage.selectProductFromShopList("Beanie");
         productPage.clickZoomButton();
     }
     @Step
