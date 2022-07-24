@@ -1,6 +1,7 @@
 Numele şi prenumele absolventului: Radu Nicolae
 Tema lucrării: Automated Acceptance Testing Framework utilizând Serenity BDD
 Url: http://qa4.fasttrackit.org:8008/
+
 Descrierea lucrării: FastTrackIT este o aplicaţie web utilizată pentru vânzarea de produse. 
 Am construit o arhitectura de testare automată in Java folosind Serenity Framework, 
 care ruleaza scripturi automate pentru a rula teste de acceptarea a aplicatiei si teste de regresie. 
