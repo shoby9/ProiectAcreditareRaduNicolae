@@ -53,17 +53,14 @@ public class CheckoutPage extends BasePage {
     public void setBillingCompany(String text) {
         typeInto(billingCompanyField, text);
     }
-    public void setBillingCountry() {
 
-    }
     public void setBillingAddress(String text) {
         typeInto(billingAddress, text);
     }
     public void setBillingCity(String text) {
         typeInto(billingCity, text);
     }
-    public void setBillingCounty(String text) {
-    }
+
     public void setBillingPostcode(String text) {
         typeInto(billingPostcode, text);
     }

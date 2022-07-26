@@ -12,7 +12,7 @@ import java.util.List;
 public class ProductPage extends BasePage {
 
     String quantity= RandomStringUtils.randomNumeric(1);
-    String review="Nice material and good Cap :)";
+    String review= RandomStringUtils.randomAlphabetic(5)+" "+RandomStringUtils.randomAlphabetic(5);
 
 
     @FindBy(css = "[name=add-to-cart]")
@@ -66,10 +66,6 @@ public class ProductPage extends BasePage {
         typeInto(reviewMessage,review);
     }
 
-    public static void verifyShopPageTitle(String text){shopPageTitle.getText();
-        Assert.assertEquals("SHOP",text);
-    }
-
     public void clickSubmitReview(){
         clickOn(submitReview);
     }
@@ -104,7 +100,7 @@ public class ProductPage extends BasePage {
 
     public void clickZoomButton() { clickOn(zoomButton); }
 
-    public static void selectProductFromShopList(String product){
+    public  void selectProductFromShopList(String product){
         for(WebElementFacade element : productsShopList){
             if(element.findElement(By.cssSelector(".woocommerce-loop-product__title")).getText().equalsIgnoreCase(product)){
                 element.click();

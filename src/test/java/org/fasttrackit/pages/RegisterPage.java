@@ -3,6 +3,7 @@ package org.fasttrackit.pages;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
 
 public class RegisterPage extends BasePage {
@@ -21,6 +22,13 @@ public class RegisterPage extends BasePage {
     private WebElementFacade registerRequiredFields;
     @FindBy(css = ".content-wrap")
     private WebElementFacade contentWrapClick;
+
+    public void setEmailField(){
+        typeInto(registerEmailField, RandomStringUtils.randomAlphabetic(8)+"@yahoo.com");
+    }
+    public void setPassField() {
+        typeInto(registerPasswordField, RandomStringUtils.randomAlphabetic(5)+" "+RandomStringUtils.randomAlphabetic(5));
+    }
 
     public void setUsernameField(String username){
         typeInto(registerEmailField, username);

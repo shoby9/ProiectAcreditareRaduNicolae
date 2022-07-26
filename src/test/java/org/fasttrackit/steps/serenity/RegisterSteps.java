@@ -15,10 +15,17 @@ public class RegisterSteps extends ScenarioSteps {
     private RegisterPage registerPage;
 
     @Step
+    public void setRegisterNameEmail() {
+        registerPage.setEmailField();
+        registerPage.setPassField();
+    }
+
+    @Step
     public void setRegisterCredentials(String email, String pass) {
         registerPage.setUsernameField(email);
         registerPage.setPasswordField(pass);
     }
+
     @Step
     public void clickRegisterButton(){
         registerPage.clickRegisterButton();
